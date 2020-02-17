@@ -4,10 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
+    <link rel="stylesheet" href="./css/carousel.css">
+    <!-- script -->
+    <script src="./js/carousel.js"></script>
+    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
+    <!-- script -->
     <title>Book-List</title>
 
 </head>
@@ -25,7 +31,7 @@
                     <li><input style="font-family:Arial, FontAwesome" type="text" placeholder="&#xf002; Search book" />
                     </li>
                 </ul>
-                <img class="logo" src="./logo.png" alt="logo.png">
+                <img class="logo" src="./img/logo.png" alt="logo.png">
             </nav>
         </div>
 
@@ -33,7 +39,7 @@
 
         <aside class="aside-nav-container">
             <div class="menu-btn">
-                <i class="fas fa-bars fa-2x"></i>
+                <i class="fas fa-bars"></i>
             </div>
             <div class="profile-container">
                 <img src="https://badawi1713.github.io/assets/images/profile-img.jpg" width="100%" alt="profil.jpg">
@@ -41,24 +47,64 @@
             </div>
             <nav class="aside-nav">
                 <ul>
-                    <li>Add Book</li>
-                    <li>History</li>
-                    <li>Add Book*</li>
+                    <li><a>Add Book</a></li>
+                    <li><a>History</a></li>
+                    <li><a>Add Book*</a></li>
                 </ul>
             </nav>
         </aside>
 
-        <!-- Carrousel Section -->
-        <section class="carrousel-container">
-            <div>
-                <h3>Pidi Baiq</h3>
+        <!-- Carousel Section -->
+
+        <section class="carousel-container">
+
+            <!-- Flickity HTML init -->
+            <!-- <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+                <div class="gallery-cell"></div>
+            </div> -->
+
+            <div class="card-carousel-wrapper js-flickity"
+                data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+                <div class="carousel-card">
+                    <div class="carousel-image-card">
+                        <img src="./img/carousel1.png" alt="carousel img">
+                    </div>
+                    <div class="carousel-text">
+                        <h2>Dilan 1990</h2>
+                        <p>Pidi Baiq</p>
+                    </div>
+
+                </div>
+
+                <div class="carousel-card">
+                    <div class="carousel-image-card">
+                        <img src="./img/carousel2.png" alt="carousel img">
+
+                    </div>
+                    <div class="carousel-text">
+                        <h2>Ubur-Ubur Lembur</h2>
+                        <p>Raditya Dika</p>
+
+                    </div>
+                </div>
+
+                <div class="carousel-card">
+                    <div class="carousel-image-card">
+                        <img src="./img/carousel3.png" alt="carousel img">
+
+                    </div>
+                    <div class="carousel-text">
+                        <h2>Laskar Pelangi</h2>
+                        <p>Andrea hirata</p>
+                    </div>
+                </div>
+
             </div>
-            <div>
-                <h3>Raditya Dika</h3>
-            </div>
-            <div>
-                <h3>Andrea hirata</h3>
-            </div>
+
         </section>
 
         <!-- Book Lists -->
@@ -70,7 +116,7 @@
         <section class="content-container">
 
             <div class="card-container">
-                <img src="./buku1.png" alt="book-cover">
+                <img src="./img/buku1.png" alt="book-cover">
                 <div class="card-text-container">
                     <h3>Dilan 1990</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
@@ -79,7 +125,7 @@
 
             </div>
             <div class="card-container">
-                <img src="./buku2.png" alt="book-cover">
+                <img src="./img/buku2.png" alt="book-cover">
                 <div class="card-text-container">
                     <h3>Sebuah Seni untuk ...</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
@@ -88,7 +134,7 @@
 
             </div>
             <div class="card-container">
-                <img src="./buku3.png" alt="book-cover">
+                <img src="./img/buku3.png" alt="book-cover">
                 <div class="card-text-container">
                     <h3>React Native</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed convallis lacus mi, sit amet
