@@ -30,11 +30,11 @@
 
     <aside id="mySidebar" class="aside-nav-container">
         <div class="menu-btn">
-            <i onclick="closeNav()" class="fas fa-times"></i>
+            <i onclick="return closeNav()" class="fas fa-times"></i>
         </div>
         <div class="profile-container">
             <img src="https://badawi1713.github.io/assets/images/profile-img.jpg" width="100%" alt="profil.jpg">
-            <h3>Dzaky A. Badawi</h3>
+            <h3>Dzaky Badawi</h3>
         </div>
         <nav class="aside-nav">
             <ul>
@@ -53,7 +53,7 @@
                 <ul>
                     <li id="openSidebar">
                         <div class="topnav-btn">
-                            <i onclick="openNav()" class="fas fa-bars"></i>
+                            <i onclick="return openNav()" class="fas fa-bars"></i>
                         </div>
                     </li>
                     <li>All Categories <i class="fa fa-caret-down"></i></li>
@@ -165,11 +165,16 @@
                 document.getElementById("main").style.marginLeft = "300px";
                 document.getElementById("openSidebar").style.display = "none";
             }
+
+            return false;
+
         }
         function closeNav() {
             document.getElementById("mySidebar").style.width = "0";
             document.getElementById("main").style.marginLeft = "0";
             document.getElementById("openSidebar").style.display = "flex";
+
+            return false;
         }
     </script>
 </body>
