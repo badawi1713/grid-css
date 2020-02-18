@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Favicon -->
     <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon/favicon-32x32.png">
@@ -15,28 +16,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
         integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-    <!-- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css"> -->
     <link rel="stylesheet" href="./css/carousel.css">
 
     <!-- script -->
     <script src="./js/carousel.js"></script>
-    <!-- <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script> -->
-    <!-- script -->
+
     <title>Libraries - Index</title>
 
 </head>
 
 <body>
+    <!-- Aside Nav -->
 
+    <aside id="mySidebar" class="aside-nav-container">
+        <div class="menu-btn">
+            <i onclick="closeNav()" class="fas fa-times"></i>
+        </div>
+        <div class="profile-container">
+            <img src="https://badawi1713.github.io/assets/images/profile-img.jpg" width="100%" alt="profil.jpg">
+            <h3>Dzaky A. Badawi</h3>
+        </div>
+        <nav class="aside-nav">
+            <ul>
+                <li><a href="#">Add Book</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Add Book*</a></li>
+            </ul>
+        </nav>
+    </aside>
 
-    <div class="grid-container">
+    <!-- main container -->
+    <div class="grid-container" id="main">
         <!-- Top Nav -->
         <div class="top-nav-container">
             <nav class="top-nav">
                 <ul>
-                    <li>
+                    <li id="openSidebar">
                         <div class="topnav-btn">
-                            <i class="fas fa-bars"></i>
+                            <i onclick="openNav()" class="fas fa-bars"></i>
                         </div>
                     </li>
                     <li>All Categories <i class="fa fa-caret-down"></i></li>
@@ -46,41 +63,15 @@
 
                 </ul>
 
-                <a href="#""><img class=" logo" src="./img/logo.png" alt="logo.png"></a>
+                <a href="#"><img class=" logo" src="./img/logo.png" alt="logo.png"></a>
             </nav>
         </div>
 
-        <!-- Aside Nav -->
 
-        <aside class="aside-nav-container">
-            <div class="menu-btn">
-                <i class="fas fa-bars"></i>
-            </div>
-            <div class="profile-container">
-                <img src="https://badawi1713.github.io/assets/images/profile-img.jpg" width="100%" alt="profil.jpg">
-                <h3>Dzaky A. Badawi</h3>
-            </div>
-            <nav class="aside-nav">
-                <ul>
-                    <li><a href="#">Add Book</a></li>
-                    <li><a href="#">History</a></li>
-                    <li><a href="#">Add Book*</a></li>
-                </ul>
-            </nav>
-        </aside>
 
         <!-- Carousel Section -->
 
         <section class="carousel-container">
-
-            <!-- Flickity HTML init -->
-            <!-- <div class="gallery js-flickity" data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-                <div class="gallery-cell"></div>
-            </div> -->
 
             <div class="card-carousel-wrapper js-flickity"
                 data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
@@ -160,6 +151,27 @@
         </section>
 
     </div>
+
+    <!-- script -->
+    <script>
+        function openNav() {
+            // document.getElementById("mySidenav").style.width = "100%";
+            if (window.matchMedia("(max-width: 700px)").matches) {
+                document.getElementById("mySidebar").style.width = "100%";
+                document.getElementById("main").style.marginLeft = "0";
+                document.getElementById("openSidebar").style.display = "none";
+            } else {
+                document.getElementById("mySidebar").style.width = "300px";
+                document.getElementById("main").style.marginLeft = "300px";
+                document.getElementById("openSidebar").style.display = "none";
+            }
+        }
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.getElementById("openSidebar").style.display = "flex";
+        }
+    </script>
 </body>
 
 </html>
